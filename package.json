@@ -13,7 +13,7 @@
     "test": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress run",
     "test:open": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress open",
     "test:ci": "DETERMINISTIC=true start-server-and-test serve 9000",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
