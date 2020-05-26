@@ -12,7 +12,8 @@
     "setup": "node ./bin/setup.js",
     "test": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress run",
     "test:open": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress open",
-    "test:ci": "DETERMINISTIC=true start-server-and-test serve 9000"
+    "test:ci": "DETERMINISTIC=true start-server-and-test serve 9000",
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "repository": {
     "type": "git",
@@ -77,6 +78,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.20.0",
+    "gh-pages": "^2.2.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.6",
     "prettier": "^2.0.5",
