@@ -37,6 +37,8 @@ const plugins = [
   "gatsby-plugin-offline",
 ];
 
+const pathPrefix = "/musakacmaz.github.io";
+
 module.exports = client.getEntries().then((entries) => {
   const { mediumUser } = entries.items.find(getAboutEntry).fields;
 
@@ -62,5 +64,6 @@ module.exports = client.getEntries().then((entries) => {
       deterministicBehaviour: !!DETERMINISTIC,
     },
     plugins,
+    pathPrefix,
   };
 });
